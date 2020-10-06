@@ -25,7 +25,7 @@ bool gameRunning = true;
 
 bool init(){
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0){
-        std::cout << "Failed SDL2 Init "<< SDL_GetError() << std::endl;
+        std::cout << "Failed SDL2 Init, "<< SDL_GetError() << std::endl;
         return false;
     }
         

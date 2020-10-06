@@ -24,7 +24,8 @@ public:
     SDL_Texture* cargarTextura(const char* path);
     void limpiarPantalla();
     void limpiar();
-    void render();
+    void render(Entity& entity, bool scaled);
+    void renderAnimated(Entity& entity, int frames, int speed, bool scaled);
     void renderColor();
     void display();
 private:

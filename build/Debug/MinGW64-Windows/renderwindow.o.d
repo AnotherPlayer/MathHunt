@@ -1,6 +1,6 @@
-build/Debug/MinGW64-Windows/main.o: main.cpp RenderWindow.h \
- d:/dev/sdl/include/SDL2/SDL.h d:/dev/sdl/include/SDL2/SDL_main.h \
- d:/dev/sdl/include/SDL2/SDL_stdinc.h \
+build/Debug/MinGW64-Windows/renderwindow.o: renderwindow.cpp \
+ RenderWindow.h d:/dev/sdl/include/SDL2/SDL.h \
+ d:/dev/sdl/include/SDL2/SDL_main.h d:/dev/sdl/include/SDL2/SDL_stdinc.h \
  d:/dev/sdl/include/SDL2/SDL_config.h \
  d:/dev/sdl/include/SDL2/SDL_platform.h \
  d:/dev/sdl/include/SDL2/begin_code.h \

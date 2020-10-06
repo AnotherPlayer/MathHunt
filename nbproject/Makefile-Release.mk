@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/entity.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/math.o \
 	${OBJECTDIR}/renderwindow.o
 
 
@@ -73,6 +74,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/math.o: math.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/math.o math.cpp
 
 ${OBJECTDIR}/renderwindow.o: renderwindow.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -8,12 +8,14 @@
 #include <iostream>
 
 
-void RenderWindow::RenderWindow(){
+RenderWindow::RenderWindow(){
     //
+    window = NULL;
+    renderer = NULL;
 }
 
 void RenderWindow::crear(const char* title, int width, int height){
-    window = SDL_CreateWindow(title, SDL_SINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
+    window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
     
     if(window == NULL)
         std::cout << "No se pudo iniciar la ventana, " << SDL_GetError() << std::endl;
@@ -92,6 +94,6 @@ void RenderWindow::renderColor(){
 
 }
 
-void display(){
+void RenderWindow::display(){
     SDL_RenderPresent(renderer);
 }

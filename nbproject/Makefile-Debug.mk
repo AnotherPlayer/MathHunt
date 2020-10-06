@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/entity.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/math.o \
 	${OBJECTDIR}/renderwindow.o
 
 
@@ -62,7 +63,7 @@ LDLIBSOPTIONS=-L/D/dev/sdl/lib
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/projectborealis.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/projectborealis ${OBJECTFILES} ${LDLIBSOPTIONS} -lmingw32 -lSDL2main -lSDL2
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/projectborealis ${OBJECTFILES} ${LDLIBSOPTIONS} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer
 
 ${OBJECTDIR}/entity.o: entity.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -73,6 +74,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/D/dev/sdl/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/math.o: math.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/D/dev/sdl/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/math.o math.cpp
 
 ${OBJECTDIR}/renderwindow.o: renderwindow.cpp
 	${MKDIR} -p ${OBJECTDIR}

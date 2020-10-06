@@ -20,6 +20,7 @@
                    projectFiles="true">
       <itemPath>entity.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>math.cpp</itemPath>
       <itemPath>renderwindow.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -54,7 +55,7 @@
           <linkerAddLib>
             <pElem>D:/dev/sdl/lib</pElem>
           </linkerAddLib>
-          <commandLine>-lmingw32 -lSDL2main -lSDL2</commandLine>
+          <commandLine>-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer</commandLine>
         </linkerTool>
       </compileType>
       <item path="Duck.h" ex="false" tool="3" flavor2="0">
@@ -72,6 +73,8 @@
       <item path="entity.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="math.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="renderwindow.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -113,6 +116,8 @@
       <item path="entity.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="math.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="renderwindow.cpp" ex="false" tool="1" flavor2="0">
       </item>

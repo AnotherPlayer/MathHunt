@@ -1,4 +1,4 @@
-build/Debug/MinGW64-Windows/main.o: main.cpp RenderWindow.h \
+build/Debug/MinGW64-Windows/entity.o: entity.cpp Entity.h \
  d:/dev/sdl/include/SDL2/SDL.h d:/dev/sdl/include/SDL2/SDL_main.h \
  d:/dev/sdl/include/SDL2/SDL_stdinc.h \
  d:/dev/sdl/include/SDL2/SDL_config.h \
@@ -33,10 +33,9 @@ build/Debug/MinGW64-Windows/main.o: main.cpp RenderWindow.h \
  d:/dev/sdl/include/SDL2/SDL_sensor.h d:/dev/sdl/include/SDL2/SDL_shape.h \
  d:/dev/sdl/include/SDL2/SDL_system.h d:/dev/sdl/include/SDL2/SDL_timer.h \
  d:/dev/sdl/include/SDL2/SDL_version.h \
- d:/dev/sdl/include/SDL2/SDL_image.h d:/dev/sdl/include/SDL2/SDL.h \
- Entity.h Math.h
+ d:/dev/sdl/include/SDL2/SDL_image.h d:/dev/sdl/include/SDL2/SDL.h Math.h
 
-RenderWindow.h:
+Entity.h:
 
 d:/dev/sdl/include/SDL2/SDL.h:
 
@@ -133,7 +132,5 @@ d:/dev/sdl/include/SDL2/SDL_version.h:
 d:/dev/sdl/include/SDL2/SDL_image.h:
 
 d:/dev/sdl/include/SDL2/SDL.h:
-
-Entity.h:
 
 Math.h:

@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/entity.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/renderwindow.o
 
@@ -62,6 +63,11 @@ LDLIBSOPTIONS=-L/D/dev/sdl/lib
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/projectborealis.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/projectborealis ${OBJECTFILES} ${LDLIBSOPTIONS} -lmingw32 -lSDL2main -lSDL2
+
+${OBJECTDIR}/entity.o: entity.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/D/dev/sdl/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/entity.o entity.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

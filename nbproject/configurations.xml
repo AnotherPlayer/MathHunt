@@ -4,6 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Duck.h</itemPath>
+      <itemPath>Entity.h</itemPath>
+      <itemPath>GameManager.h</itemPath>
+      <itemPath>Math.h</itemPath>
+      <itemPath>Player.h</itemPath>
       <itemPath>RenderWindow.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +18,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>entity.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>renderwindow.cpp</itemPath>
     </logicalFolder>
@@ -51,7 +57,19 @@
           <commandLine>-lmingw32 -lSDL2main -lSDL2</commandLine>
         </linkerTool>
       </compileType>
+      <item path="Duck.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Math.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RenderWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="entity.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -80,7 +98,19 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Duck.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GameManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Math.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Player.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RenderWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="entity.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -39,11 +39,56 @@ void RenderWindow::limpiar(){
     SDL_DestroyWindow(window);
 }
 
-void render(){
+void RenderWindow::render(Entity& entity, bool scaled){
+    //Refactored.
+	SDL_Rect src;
+	src.x = 0;
+	src.y = 0;
+	src.w = entity.getCurrentFrame().w;
+	src.h = entity.getCurrentFrame().h;
 
+	SDL_Rect dst; // Destino, donde estara dibujada la textura.
+	dst.x = entity.getPos().x;
+	dst.y = entity.getPos().y;
+
+	if(scaled){
+		dst.w = entity.getCurrentFrame().w * 2;
+		dst.h = entity.getCurrentFrame().h  * 2;
+	}
+		else
+	{
+		dst.w = entity.getCurrentFrame().w;
+		dst.h = entity.getCurrentFrame().h;
+	}
+	SDL_RenderCopy(renderer, entity.getTexture(), &src, &dst);
 }
 
-void renderColor(){
+void RenderWindow::renderAnimated(Entity& entity, int frames, int speed, bool scaled){
+    SDL_Rect src;
+	src.x = 0;
+	src.y = 0;
+	src.w = entity.getCurrentFrame().w;
+	src.h = entity.getCurrentFrame().h;
+
+	// used for spritesheet animations (HORIZONTALLY ONLY.)
+	int magic = static_cast<int>((SDL_GetTicks() / speed) % frames);
+	src.x = src.w * magic;
+
+	SDL_Rect dst; // Destino, donde estara dibujada la textura.
+	dst.x = entity.getPos().x;
+	dst.y = entity.getPos().y;
+	if(scaled){
+		dst.w = entity.getCurrentFrame().w * 2;
+		dst.h = entity.getCurrentFrame().h * 2;
+	}else{
+		dst.w = entity.getCurrentFrame().w;
+		dst.h = entity.getCurrentFrame().h;
+	}
+
+	SDL_RenderCopy(renderer, entity.getTexture(), &src, &dst);
+}
+
+void RenderWindow::renderColor(){
 
 }
 

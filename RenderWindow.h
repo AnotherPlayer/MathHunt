@@ -21,6 +21,7 @@ class RenderWindow{
 public:
     RenderWindow();
     void crear(const char* titulo, int width, int height);
+    SDL_Texture* cargarTextura(const char* path);
     void limpiarPantalla();
     void limpiar();
     void render();

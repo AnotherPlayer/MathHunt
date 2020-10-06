@@ -21,6 +21,16 @@ void RenderWindow::crear(const char* title, int width, int height){
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 }
 
+SDL_Texture* RenderWindow::cargarTextura(const char* path){
+    SDL_Texture* textura = NULL;
+    textura = IMG_LoadTexture(renderer, path);
+    if(textura == NULL)
+        std::cout << "Fallo la carga de imagen " << SDL_GetError() << std::endl;
+    
+    //TODO: Missing Texture return.
+    return textura;
+}
+
 void RenderWindow::limpiarPantalla(){
     SDL_RenderClear(renderer);
 }
